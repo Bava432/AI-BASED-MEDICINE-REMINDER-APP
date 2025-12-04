@@ -1,0 +1,95 @@
+name: medi_app
+description: An intelligent Medicine Reminder and Health Tracker app
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- UI/Utility/Core Updates ---
+  intl: ^0.20.2
+  cupertino_icons: ^1.0.8
+  fluttericon: ^2.0.0
+  font_awesome_flutter: ^10.7.0
+  animated_bottom_navigation_bar: ^1.2.0
+  
+  # --- Storage & Persistence ---
+  shared_preferences: ^2.2.3
+  path_provider: ^2.1.3
+  
+  # --- Data Persistence: Hive & Sqflite ---
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  sqflite: ^2.3.4
+  
+  # --- UI/Animation/Pedometer ---
+  lottie: ^3.1.2
+  swipe_deck: ^1.1.0
+  awesome_card: ^1.1.7
+  pedometer: ^4.1.1
+  permission_handler: ^12.0.1
+  
+  # --- State Management (Bloc) ---
+  bloc: ^8.1.4
+  flutter_bloc: ^8.1.6
+  equatable: ^2.0.5
+  
+  # --- Network & Tools ---
+  http: ^1.2.2
+  url_launcher: ^6.3.0
+  image_picker: ^1.2.1
+  csv: ^6.0.0
+  
+  # --- Notifications (CRITICAL FIX: Dependency lock) ---
+  flutter_local_notifications: ^17.1.0 
+  timezone: ^0.9.4
+  
+  # 🚀 NEW: Robust background scheduler
+  workmanager: ^0.9.0
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  
+  # --- Code Generation Tools ---
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.9
+  
+  # --- Icon Generation ---
+  flutter_launcher_icons: ^0.13.1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/favicon(3).png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icons/favicon(2).png
+    - assets/icons/favicon(3).png
+    - assets/lottiefile/
+    - assets/data/medicine.csv
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/Fonts/RobotoFont.ttf
+
+    - family: Lato
+      fonts:
+        - asset: assets/Fonts/Lato-Regular.ttf
+
+    - family: Cascadia
+      fonts:
+        - asset: assets/Fonts/CascadiaMono.ttf
